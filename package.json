@@ -27,7 +27,7 @@
     "node": ">= 4.0.0"
   },
   "scripts": {
-    "install": "prebuild-install",
+    "install": "prebuild-install || node-gyp rebuild || 0",
     "apply-patches": "patch-package",
     "prebuild-all": "prebuild --all --force --strip --verbose --openssl_fips=X",
     "prebuild": "prebuild",
