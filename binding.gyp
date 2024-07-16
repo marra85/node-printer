@@ -60,8 +60,12 @@
           'cflags':[
             "-stdlib=libc++"
           ],
+          'cflags_cc+': [
+            "-Wno-deprecated-declarations",
+            "-Wc++17-extensions"
+          ],
           'xcode_settings': {
-            "OTHER_CPLUSPLUSFLAGS":["-std=c++14", "-stdlib=libc++"],
+            "OTHER_CPLUSPLUSFLAGS":["-std=c++17", "-stdlib=libc++"],
             "OTHER_LDFLAGS": ["-stdlib=libc++"],
             "MACOSX_DEPLOYMENT_TARGET": "10.7",
           },
